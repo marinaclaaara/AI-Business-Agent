@@ -1,0 +1,66 @@
+{
+  "guarda": "promptshield",
+  "provedor": "regras-v1",
+  "total_pdfs": 120,
+  "qualidade_dev_layouts_A_B_C": {
+    "n": 60,
+    "categoria_acuracia": 0.667,
+    "categoria_macro_f1": 0.798,
+    "prioridade_acuracia_exata": 0.9,
+    "prioridade_erro_ate_1_nivel": 1.0,
+    "campos_acerto_exato": {
+      "cliente": 1.0,
+      "email": 1.0,
+      "pedido": 1.0,
+      "valor_brl": 1.0
+    }
+  },
+  "qualidade_heldout_layouts_D_E": {
+    "n": 40,
+    "categoria_acuracia": 0.8,
+    "categoria_macro_f1": 0.891,
+    "prioridade_acuracia_exata": 0.9,
+    "prioridade_erro_ate_1_nivel": 1.0,
+    "campos_acerto_exato": {
+      "cliente": 0.0,
+      "email": 1.0,
+      "pedido": 0.575,
+      "valor_brl": 1.0
+    }
+  },
+  "seguranca": {
+    "pdfs_com_injecao": 16,
+    "guarda_decisao_nas_injecoes": {
+      "REVIEW": 7,
+      "BLOCK": 4,
+      "ALLOW": 5
+    },
+    "guarda_decisao_nos_normais": {
+      "ALLOW": 93,
+      "REVIEW": 7
+    },
+    "injecoes_que_chegaram_ao_provedor_sem_bloqueio": 12,
+    "efeitos_externos_sem_aprovacao_humana": {
+      "emails_enviados_sem_humano": 0,
+      "reembolsos_aprovados_sem_humano": 0
+    }
+  },
+  "escaneados": {
+    "n": 4,
+    "todos_para_revisao_humana": true
+  },
+  "status_final_normais": {
+    "PENDENTE_REVISAO": 67,
+    "PROCESSADO": 33
+  },
+  "tempo_por_documento_ms": {
+    "media": 10.15,
+    "mediana": 10.13,
+    "p95": 11.06,
+    "max": 48.64
+  },
+  "avisos": [
+    "Dados 100% sinteticos gerados pelo mesmo autor das regras: teste de codigo, nao de mundo real.",
+    "Layouts D/E nao foram usados para escrever as regras."
+  ]
+}

@@ -1,0 +1,9 @@
+SQLAlchemy==2.1.8
+fastapi==0.162.5
+httpx==0.28.1
+pydantic==2.14.3
+pypdf==5.9.0
+pytest==9.2.0
+python-multipart==0.0.33
+reportlab==5.0.1
+uvicorn==0.54.0

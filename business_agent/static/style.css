@@ -1,0 +1,19 @@
+:root { --bg:#f6f7f9; --card:#fff; --txt:#16191f; --mut:#5b6472; --bd:#dde1e7; --pri:#2b5fd9; --ok:#1f9d55; --rev:#d98a00; --blk:#d33a3a; color-scheme: light dark; }
+@media (prefers-color-scheme: dark) { :root { --bg:#111418; --card:#1a1f26; --txt:#e8ebf0; --mut:#9aa4b2; --bd:#2a313b; --pri:#6c93f5; } }
+* { box-sizing: border-box; } body { margin:0; background:var(--bg); color:var(--txt); font:16px/1.5 system-ui, sans-serif; }
+header, main { max-width: 980px; margin: 0 auto; padding: 12px 16px; } h1 { margin: 8px 0 0; } h2 { margin: 0 0 8px; font-size: 1.1rem; }
+.mut { color: var(--mut); font-size: .9rem; } .card { background:var(--card); border:1px solid var(--bd); border-radius:12px; padding:16px; margin:12px 0; }
+label { display:block; font-weight:600; font-size:.9rem; } input, select, textarea { padding:8px; border-radius:8px; border:1px solid var(--bd); background:var(--bg); color:var(--txt); font:inherit; }
+input[type=password], textarea { width: 100%; max-width: 420px; display:block; margin-top:4px; } textarea { max-width: 100%; }
+button { background:var(--pri); color:#fff; border:0; border-radius:8px; padding:8px 16px; font:inherit; cursor:pointer; } button.sec { background:transparent; color:var(--txt); border:1px solid var(--bd); }
+button.ok { background: var(--ok); } button.no { background: var(--blk); } button:disabled { opacity:.5; cursor:not-allowed; }
+.linha { display:flex; align-items:center; gap:12px; flex-wrap:wrap; } .linha h2 { margin:0; }
+.rolagem { overflow-x:auto; } table { width:100%; border-collapse:collapse; font-size:.9rem; } th,td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--bd); white-space:nowrap; }
+tr.sel { background: color-mix(in srgb, var(--pri) 12%, transparent); } tbody tr { cursor:pointer; }
+.selo { padding:2px 10px; border-radius:999px; color:#fff; font-size:.8rem; font-weight:700; background:var(--mut); }
+.s-PROCESSADO,.s-APROVADA { background:var(--ok); } .s-PENDENTE_REVISAO { background:var(--rev); } .s-BLOQUEADO,.s-REJEITADA,.s-ERRO { background:var(--blk); }
+#kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; } #kpis div { border:1px solid var(--bd); border-radius:10px; padding:10px; text-align:center; }
+#kpis b { display:block; font-size:1.4rem; } #kpis span { color:var(--mut); font-size:.85rem; }
+.graficos { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; } svg { width:100%; } .val { font-size:10px; fill:var(--txt); } .rot { font-size:8px; fill:var(--mut); } .barra { fill:var(--pri); }
+dl { display:grid; grid-template-columns:auto 1fr; gap:2px 12px; font-size:.9rem; } dt { color:var(--mut); } dd { margin:0; word-break:break-word; }
+ul { padding-left: 18px; } .neg { color: var(--blk); font-weight:600; } .erro { color: var(--blk); }

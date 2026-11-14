@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Business Agent - Painel de revisão</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>AI Business Agent</h1>
+    <p class="mut">Triagem de solicitações em PDF com revisão humana. O conteúdo dos PDFs é tratado como não confiável.</p>
+    <label>Chave de API (se exigida; fica só na memória)
+      <input id="chave" type="password" autocomplete="off">
+    </label>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Enviar PDFs</h2>
+      <input id="arquivos" type="file" accept="application/pdf" multiple>
+      <button id="enviar">Processar</button>
+      <p id="msg" class="mut" role="status"></p>
+    </section>
+    <section class="card" id="kpis"></section>
+    <section class="card graficos" id="graficos"></section>
+    <section class="card">
+      <div class="linha">
+        <h2>Solicitações</h2>
+        <select id="filtro" aria-label="Filtrar por status">
+          <option value="">Todos os status</option>
+          <option>PENDENTE_REVISAO</option><option>PROCESSADO</option><option>BLOQUEADO</option>
+          <option>APROVADA</option><option>REJEITADA</option>
+        </select>
+        <button id="atualizar" class="sec">Atualizar</button>
+        <a id="baixar" href="#" class="mut">Relatório (.md)</a>
+      </div>
+      <div class="rolagem"><table id="tabela"></table></div>
+    </section>
+    <section class="card" id="detalhe" hidden></section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
